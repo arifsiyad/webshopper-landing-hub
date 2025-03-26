@@ -28,28 +28,28 @@ const Navbar = () => {
           : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
+      <div className="max-w-7xl mx-auto flex items-center justify-between animate-fade-in">
+        <a href="#" className="flex items-center gap-2 transition-custom hover-scale">
           <span className="text-xl font-display font-bold dark:text-white">LitPages</span>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
-          <a href="#templates" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
+          <a href="#templates" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70 story-link">
             Templates
           </a>
-          <a href="#features" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
+          <a href="#features" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70 story-link">
             Features
           </a>
-          <a href="#about" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
+          <a href="#about" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70 story-link">
             About Us
           </a>
-          <a href="#services" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
+          <a href="#services" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70 story-link">
             Services
           </a>
-          <a href="#pricing" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
+          <a href="#pricing" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70 story-link">
             Pricing
           </a>
-          <a href="#faq" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
+          <a href="#faq" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70 story-link">
             FAQ
           </a>
         </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
             pressed={theme === 'dark'} 
             onPressedChange={toggleTheme}
             aria-label="Toggle dark mode"
-            className="bg-transparent border border-gray-200 dark:border-gray-700"
+            className="bg-transparent border border-gray-200 hover-scale transition-custom dark:border-gray-700"
           >
             {theme === 'dark' ? (
               <Moon className="h-4 w-4 text-gray-200" />
@@ -70,13 +70,13 @@ const Navbar = () => {
           
           <Link 
             to="/login" 
-            className="text-sm font-medium hover:text-black/70 transition-custom hidden sm:inline-block dark:text-gray-200 dark:hover:text-white/70"
+            className="text-sm font-medium hover:text-black/70 transition-custom hidden sm:inline-block dark:text-gray-200 dark:hover:text-white/70 story-link"
           >
             Login
           </Link>
           <Link 
             to="/register" 
-            className="button-primary text-sm font-medium dark:bg-white dark:text-black dark:hover:bg-gray-200"
+            className="button-primary text-sm font-medium hover-scale dark:bg-white dark:text-black dark:hover:bg-gray-200"
           >
             Get Started
           </Link>

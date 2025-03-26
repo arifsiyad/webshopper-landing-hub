@@ -11,24 +11,24 @@ const Hero = () => {
       
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
-          <div className="inline-flex items-center justify-center rounded-full bg-secondary px-3 py-1 text-sm dark:bg-gray-800">
+          <div className="inline-flex items-center justify-center rounded-full bg-secondary px-3 py-1 text-sm dark:bg-gray-800 animate-slide-up" style={{ animationDelay: "0.1s" }}>
             <span className="text-primary/80 dark:text-gray-300">Websites for Modern Professionals</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight max-w-4xl text-gradient-primary dark:text-white">
+          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight max-w-4xl text-gradient-primary dark:text-white animate-slide-up" style={{ animationDelay: "0.3s" }}>
             Create stunning websites in minutes
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mt-2 dark:text-gray-400">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mt-2 dark:text-gray-400 animate-slide-up" style={{ animationDelay: "0.5s" }}>
             Get professionally designed websites starting at just ₹1,500. Customize and share your online presence instantly.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Link to="/register" className="button-primary group text-base font-medium flex items-center gap-2 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+          <div className="flex flex-col sm:flex-row gap-4 mt-6 animate-slide-up" style={{ animationDelay: "0.7s" }}>
+            <Link to="/register" className="button-primary group text-base font-medium flex items-center gap-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 hover-scale">
               Create Your Website
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href="#how-it-works" className="button-secondary text-base font-medium dark:bg-transparent dark:text-white dark:border-gray-700">
+            <a href="#how-it-works" className="button-secondary text-base font-medium dark:bg-transparent dark:text-white dark:border-gray-700 hover-scale">
               How It Works
             </a>
           </div>
