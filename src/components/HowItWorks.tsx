@@ -4,18 +4,18 @@ import { ArrowRight } from 'lucide-react';
 const steps = [
   {
     number: '01',
-    title: 'Choose a template',
-    description: 'Browse our collection and select a template that matches your business needs.'
+    title: 'Create your account',
+    description: 'Register and verify your email to gain access to your admin dashboard.'
   },
   {
     number: '02',
-    title: 'Customize your site',
-    description: 'We help you add your content, images, and brand colors to make it uniquely yours.'
+    title: 'Choose a template',
+    description: 'Select from our 10 professional VCard templates that match your style.'
   },
   {
     number: '03',
-    title: 'Launch with confidence',
-    description: 'Your website goes live instantly with our help. Get online in minutes, not months.'
+    title: 'Customize & share',
+    description: 'Add your information, customize colors, and share your digital business card instantly.'
   }
 ];
 
@@ -28,7 +28,7 @@ const HowItWorks = () => {
             Simple three-step process
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Get your professional website up and running with minimal effort.
+            Get your digital business card up and running in minutes, not days.
           </p>
         </div>
         

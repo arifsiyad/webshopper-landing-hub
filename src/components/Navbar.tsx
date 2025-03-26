@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <span className="text-xl font-display font-bold">WebCraft</span>
+          <span className="text-xl font-display font-bold">LitPages</span>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
@@ -33,6 +34,12 @@ const Navbar = () => {
           <a href="#features" className="text-sm font-medium hover:text-black/70 transition-custom">
             Features
           </a>
+          <a href="#about" className="text-sm font-medium hover:text-black/70 transition-custom">
+            About Us
+          </a>
+          <a href="#services" className="text-sm font-medium hover:text-black/70 transition-custom">
+            Services
+          </a>
           <a href="#pricing" className="text-sm font-medium hover:text-black/70 transition-custom">
             Pricing
           </a>
@@ -41,12 +48,20 @@ const Navbar = () => {
           </a>
         </div>
 
-        <a 
-          href="#contact" 
-          className="button-primary text-sm font-medium"
-        >
-          Get Started
-        </a>
+        <div className="flex items-center gap-4">
+          <Link 
+            to="/login" 
+            className="text-sm font-medium hover:text-black/70 transition-custom hidden sm:inline-block"
+          >
+            Login
+          </Link>
+          <Link 
+            to="/register" 
+            className="button-primary text-sm font-medium"
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
     </nav>
   );

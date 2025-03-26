@@ -7,12 +7,13 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
+    subject: '',
     message: ''
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -28,6 +29,7 @@ const Contact = () => {
         name: '',
         email: '',
         phone: '',
+        subject: '',
         message: ''
       });
       setIsSubmitting(false);
@@ -41,10 +43,10 @@ const Contact = () => {
           <div className="animate-slide-up">
             <div className="max-w-md">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                Ready to get started?
+                Get in touch
               </h2>
               <p className="text-lg text-white/70 mb-8">
-                Fill out the form and we'll get back to you within 24 hours to discuss your website needs.
+                Have questions about our digital business cards or need assistance with your account? Fill out the form and we'll get back to you within 24 hours.
               </p>
               
               <div className="space-y-6">
@@ -56,7 +58,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email</h3>
-                    <p className="text-white/70">contact@webcraft.com</p>
+                    <p className="text-white/70">contact@litpages.com</p>
                   </div>
                 </div>
                 
@@ -69,6 +71,19 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-medium mb-1">Phone</h3>
                     <p className="text-white/70">+91 98765 43210</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium mb-1">Office</h3>
+                    <p className="text-white/70">123 Business Park, Mumbai, India</p>
                   </div>
                 </div>
               </div>
@@ -127,6 +142,26 @@ const Contact = () => {
               </div>
               
               <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  Subject
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black"
+                  required
+                >
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="support">Technical Support</option>
+                  <option value="billing">Billing Question</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                </select>
+              </div>
+              
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   Message
                 </label>
@@ -137,7 +172,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black"
-                  placeholder="Tell us about your website needs..."
+                  placeholder="How can we help you?"
                   required
                 ></textarea>
               </div>

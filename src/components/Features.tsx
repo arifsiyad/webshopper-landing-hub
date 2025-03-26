@@ -1,36 +1,51 @@
 
-import { Check, Zap, Clock, Paintbrush, Globe, Smartphone } from 'lucide-react';
+import { Zap, Clock, Paintbrush, Globe, Smartphone, Users, BarChart, Shield, Share2 } from 'lucide-react';
 
 const features = [
   {
-    title: 'Ready to Launch',
-    description: 'Each template is fully responsive and ready for immediate launch, saving you time and effort.',
-    icon: Zap,
+    title: 'Digital Business Cards',
+    description: 'Create digital business cards that can be shared instantly via QR code, link, or NFC.',
+    icon: Share2,
   },
   {
-    title: 'Quick Setup',
-    description: 'Get your website up and running in minutes, not days or weeks.',
-    icon: Clock,
-  },
-  {
-    title: 'Customizable Design',
-    description: 'Easily customize colors, fonts, and content to match your brand.',
+    title: 'Customizable Templates',
+    description: 'Choose from 10+ beautiful templates and customize colors, fonts, and content.',
     icon: Paintbrush,
   },
   {
     title: 'Mobile Responsive',
-    description: 'Every website looks perfect on all devices, from desktops to smartphones.',
+    description: 'All digital business cards work perfectly on all devices, from desktops to smartphones.',
     icon: Smartphone,
   },
   {
-    title: 'SEO Optimized',
-    description: 'Built with best practices for search engines to help your site rank higher.',
+    title: 'Social Media Integration',
+    description: 'Connect all your social profiles in one place for easy access.',
     icon: Globe,
   },
   {
-    title: 'Custom Domain',
-    description: 'Use your own domain name or we can help you register a new one.',
-    icon: Check,
+    title: 'Business Hours',
+    description: 'Display your business hours so customers know when you\'re available.',
+    icon: Clock,
+  },
+  {
+    title: 'Inquiry Management',
+    description: 'Receive and manage inquiries directly through your digital business card.',
+    icon: BarChart,
+  },
+  {
+    title: 'User Management',
+    description: 'Admins can manage users, view statistics, and control access.',
+    icon: Users,
+  },
+  {
+    title: 'Analytics & Insights',
+    description: 'Track views, clicks, and engagement on your digital business cards.',
+    icon: Shield,
+  },
+  {
+    title: 'Instant Updates',
+    description: 'Update your information anytime and see changes reflected instantly.',
+    icon: Zap,
   },
 ];
 
@@ -40,10 +55,10 @@ const Features = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary">
-            Everything you need to succeed online
+            Powerful VCard features
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our templates come packed with features to make your website stand out.
+            Our digital business cards come packed with features to help you stand out.
           </p>
         </div>
         

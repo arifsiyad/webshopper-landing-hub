@@ -5,17 +5,17 @@ const Footer = () => {
   return (
     <footer className="py-12 px-4 border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-xl font-display font-bold">WebCraft</span>
+              <span className="text-xl font-display font-bold">LitPages</span>
             </div>
             <p className="text-muted-foreground">
-              Premium websites at affordable prices. Launch your online presence quickly and professionally.
+              Create and share digital business cards that make a lasting impression.
             </p>
           </div>
           
-          <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="md:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-8">
             <div>
               <h3 className="font-medium mb-4">Navigation</h3>
               <ul className="space-y-3">
@@ -25,8 +25,13 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
-                    Features
+                  <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
+                    Services
                   </a>
                 </li>
                 <li>
@@ -37,6 +42,32 @@ const Footer = () => {
                 <li>
                   <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">
                     FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="font-medium mb-4">Features</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
+                    Digital Business Cards
+                  </a>
+                </li>
+                <li>
+                  <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
+                    Custom Templates
+                  </a>
+                </li>
+                <li>
+                  <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
+                    Analytics
+                  </a>
+                </li>
+                <li>
+                  <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
+                    QR Codes
                   </a>
                 </li>
               </ul>
@@ -67,10 +98,15 @@ const Footer = () => {
               <h3 className="font-medium mb-4">Contact</h3>
               <ul className="space-y-3">
                 <li className="text-muted-foreground">
-                  contact@webcraft.com
+                  contact@litpages.com
                 </li>
                 <li className="text-muted-foreground">
                   +91 98765 43210
+                </li>
+                <li>
+                  <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+                    Contact Form
+                  </a>
                 </li>
               </ul>
             </div>
@@ -79,7 +115,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} WebCraft. All rights reserved.
+            © {currentYear} LitPages. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4 mt-4 sm:mt-0">

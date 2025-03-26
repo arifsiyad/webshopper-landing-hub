@@ -1,5 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -11,22 +12,22 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
           <div className="inline-flex items-center justify-center rounded-full bg-secondary px-3 py-1 text-sm">
-            <span className="text-primary/80">Premium websites at affordable prices</span>
+            <span className="text-primary/80">Digital Business Cards for Modern Professionals</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight max-w-4xl text-gradient-primary">
-            Beautiful websites ready to launch in minutes
+            Create stunning digital business cards in minutes
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mt-2">
-            Get professionally designed websites for just ₹1,500. Customize and launch your online presence instantly.
+            Get professionally designed digital business cards starting at just ₹1,500. Customize and share your online presence instantly.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <a href="#templates" className="button-primary group text-base font-medium flex items-center gap-2">
-              Browse Templates
+            <Link to="/register" className="button-primary group text-base font-medium flex items-center gap-2">
+              Create Your VCard
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
             <a href="#how-it-works" className="button-secondary text-base font-medium">
               How It Works
             </a>

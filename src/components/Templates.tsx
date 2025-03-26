@@ -2,13 +2,14 @@
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const categories = [
   { id: 'all', label: 'All Templates' },
   { id: 'business', label: 'Business' },
-  { id: 'portfolio', label: 'Portfolio' },
-  { id: 'ecommerce', label: 'E-Commerce' },
-  { id: 'blog', label: 'Blog' },
+  { id: 'professional', label: 'Professional' },
+  { id: 'creative', label: 'Creative' },
+  { id: 'personal', label: 'Personal' },
 ];
 
 const templates = [
@@ -22,35 +23,35 @@ const templates = [
   {
     id: 2,
     title: 'Creative Portfolio',
-    category: 'portfolio',
+    category: 'creative',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
     popular: false
   },
   {
     id: 3,
-    title: 'E-Commerce Shop',
-    category: 'ecommerce',
+    title: 'Entrepreneur',
+    category: 'business',
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
     popular: true
   },
   {
     id: 4,
-    title: 'Personal Blog',
-    category: 'blog',
+    title: 'Personal Brand',
+    category: 'personal',
     image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
     popular: false
   },
   {
     id: 5,
-    title: 'Corporate Site',
-    category: 'business',
+    title: 'Corporate',
+    category: 'professional',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
     popular: true
   },
   {
     id: 6,
-    title: 'Artist Portfolio',
-    category: 'portfolio',
+    title: 'Freelancer',
+    category: 'professional',
     image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b',
     popular: false
   },
@@ -75,8 +76,8 @@ const TemplateCard = ({ template }: { template: typeof templates[0] }) => {
       <div className="p-5">
         <h3 className="text-lg font-medium">{template.title}</h3>
         <div className="mt-3 flex items-center justify-between">
-          <span className="text-sm text-muted-foreground">₹1,500</span>
-          <button className="text-sm font-medium hover:underline">View Demo</button>
+          <span className="text-sm text-muted-foreground">VCard Template</span>
+          <Link to="/register" className="text-sm font-medium hover:underline">Try Now</Link>
         </div>
       </div>
     </div>
@@ -95,10 +96,10 @@ const Templates = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary">
-            Stunning templates for every need
+            10+ stunning VCard templates
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Browse our collection of professionally designed templates ready for your business.
+            Choose from our collection of professionally designed digital business card templates.
           </p>
         </div>
         
