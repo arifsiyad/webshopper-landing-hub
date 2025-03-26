@@ -24,7 +24,7 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-4 sm:px-6 md:px-8",
         scrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-black/90 dark:backdrop-blur-md dark:shadow-sm" 
+          ? "bg-white/90 backdrop-blur-md shadow-sm dark:bg-gray-900/90 dark:backdrop-blur-md dark:shadow-sm" 
           : "bg-transparent"
       )}
     >
@@ -62,7 +62,7 @@ const Navbar = () => {
             className="bg-transparent border border-gray-200 dark:border-gray-700"
           >
             {theme === 'dark' ? (
-              <Moon className="h-4 w-4 text-white" />
+              <Moon className="h-4 w-4 text-gray-200" />
             ) : (
               <Sun className="h-4 w-4 text-gray-700" />
             )}
