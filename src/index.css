@@ -47,6 +47,45 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 240 4.9% 83.9%;
+  }
+
   * {
     @apply border-border;
   }
@@ -62,31 +101,31 @@
 
   /* Card with subtle border and shadow */
   .premium-card {
-    @apply relative overflow-hidden rounded-xl border border-black/5 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)];
+    @apply relative overflow-hidden rounded-xl border border-black/5 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:bg-gray-800 dark:border-gray-700 dark:shadow-[0_8px_30px_rgb(0,0,0,0.15)] dark:hover:shadow-[0_8px_30px_rgb(0,0,0,0.25)];
   }
 
   /* Glass effect */
   .glass {
-    @apply backdrop-blur-md bg-white/70 border border-white/20;
+    @apply backdrop-blur-md bg-white/70 border border-white/20 dark:bg-black/70 dark:border-black/20;
   }
 
   /* Text gradients */
   .text-gradient-primary {
-    @apply bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-white dark:to-gray-400 dark:bg-clip-text dark:text-transparent;
   }
 
   /* Subtle overlay for images */
   .image-overlay {
-    @apply after:absolute after:inset-0 after:bg-gradient-to-b after:from-transparent after:to-black/5;
+    @apply after:absolute after:inset-0 after:bg-gradient-to-b after:from-transparent after:to-black/5 dark:after:to-black/30;
   }
   
   /* Button styling */
   .button-primary {
-    @apply relative overflow-hidden rounded-full bg-black px-6 py-3 text-white shadow-inner transition-all duration-300 hover:bg-black/90 active:scale-[0.98];
+    @apply relative overflow-hidden rounded-full bg-black px-6 py-3 text-white shadow-inner transition-all duration-300 hover:bg-black/90 active:scale-[0.98] dark:bg-white dark:text-black dark:hover:bg-white/90;
   }
   
   .button-secondary {
-    @apply relative overflow-hidden rounded-full bg-white px-6 py-3 text-black shadow-sm border border-black/10 transition-all duration-300 hover:bg-secondary active:scale-[0.98];
+    @apply relative overflow-hidden rounded-full bg-white px-6 py-3 text-black shadow-sm border border-black/10 transition-all duration-300 hover:bg-secondary active:scale-[0.98] dark:bg-transparent dark:text-white dark:border-gray-700 dark:hover:bg-white/5;
   }
 
   /* Transitions */
@@ -104,6 +143,6 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-black/10 rounded-full;
+    @apply bg-black/10 rounded-full dark:bg-white/10;
   }
 }

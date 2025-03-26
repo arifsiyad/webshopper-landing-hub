@@ -3,8 +3,8 @@ import { Zap, Clock, Paintbrush, Globe, Smartphone, Users, BarChart, Shield, Sha
 
 const features = [
   {
-    title: 'Digital Business Cards',
-    description: 'Create digital business cards that can be shared instantly via QR code, link, or NFC.',
+    title: 'Websites',
+    description: 'Create beautiful websites that can be shared instantly via links and social media.',
     icon: Share2,
   },
   {
@@ -14,7 +14,7 @@ const features = [
   },
   {
     title: 'Mobile Responsive',
-    description: 'All digital business cards work perfectly on all devices, from desktops to smartphones.',
+    description: 'All websites work perfectly on all devices, from desktops to smartphones.',
     icon: Smartphone,
   },
   {
@@ -29,7 +29,7 @@ const features = [
   },
   {
     title: 'Inquiry Management',
-    description: 'Receive and manage inquiries directly through your digital business card.',
+    description: 'Receive and manage inquiries directly through your website.',
     icon: BarChart,
   },
   {
@@ -39,7 +39,7 @@ const features = [
   },
   {
     title: 'Analytics & Insights',
-    description: 'Track views, clicks, and engagement on your digital business cards.',
+    description: 'Track views, clicks, and engagement on your websites.',
     icon: Shield,
   },
   {
@@ -51,14 +51,14 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 px-4 bg-secondary/30">
+    <section id="features" className="py-24 px-4 bg-secondary/30 dark:bg-gray-800/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary">
-            Powerful VCard features
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary dark:text-white">
+            Powerful website features
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our digital business cards come packed with features to help you stand out.
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto dark:text-gray-400">
+            Our websites come packed with features to help you stand out.
           </p>
         </div>
         
@@ -66,14 +66,14 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="premium-card p-8 flex flex-col items-start"
+              className="premium-card p-8 flex flex-col items-start dark:bg-gray-900 dark:border-gray-700"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="h-12 w-12 rounded-full bg-black/5 flex items-center justify-center mb-6">
-                <feature.icon className="h-6 w-6 text-primary" />
+              <div className="h-12 w-12 rounded-full bg-black/5 dark:bg-gray-800 flex items-center justify-center mb-6">
+                <feature.icon className="h-6 w-6 text-primary dark:text-gray-200" />
               </div>
-              <h3 className="text-xl font-medium mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="text-xl font-medium mb-3 dark:text-white">{feature.title}</h3>
+              <p className="text-muted-foreground dark:text-gray-400">{feature.description}</p>
             </div>
           ))}
         </div>

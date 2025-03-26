@@ -59,7 +59,7 @@ const templates = [
 
 const TemplateCard = ({ template }: { template: typeof templates[0] }) => {
   return (
-    <div className="premium-card group cursor-pointer">
+    <div className="premium-card group cursor-pointer dark:bg-gray-800 dark:border-gray-700">
       <div className="aspect-[16/10] overflow-hidden relative">
         <img 
           src={template.image} 
@@ -68,16 +68,16 @@ const TemplateCard = ({ template }: { template: typeof templates[0] }) => {
           loading="lazy"
         />
         {template.popular && (
-          <div className="absolute top-3 right-3 bg-black text-white text-xs px-2 py-1 rounded-full">
+          <div className="absolute top-3 right-3 bg-black text-white text-xs px-2 py-1 rounded-full dark:bg-gray-700">
             Popular
           </div>
         )}
       </div>
       <div className="p-5">
-        <h3 className="text-lg font-medium">{template.title}</h3>
+        <h3 className="text-lg font-medium dark:text-white">{template.title}</h3>
         <div className="mt-3 flex items-center justify-between">
-          <span className="text-sm text-muted-foreground">VCard Template</span>
-          <Link to="/register" className="text-sm font-medium hover:underline">Try Now</Link>
+          <span className="text-sm text-muted-foreground dark:text-gray-400">Website Template</span>
+          <Link to="/register" className="text-sm font-medium hover:underline dark:text-gray-300">Try Now</Link>
         </div>
       </div>
     </div>
@@ -92,27 +92,29 @@ const Templates = () => {
     : templates.filter(template => template.category === category);
 
   return (
-    <section id="templates" className="py-24 px-4">
+    <section id="templates" className="py-24 px-4 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 animate-slide-up">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary">
-            10+ stunning VCard templates
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary dark:text-white">
+            10+ stunning website templates
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose from our collection of professionally designed digital business card templates.
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto dark:text-gray-400">
+            Choose from our collection of professionally designed website templates.
           </p>
         </div>
         
         <Tabs defaultValue="all" className="w-full" onValueChange={setCategory}>
           <div className="flex justify-center mb-10">
-            <TabsList className="bg-secondary/50 p-1">
+            <TabsList className="bg-secondary/50 dark:bg-gray-800 p-1">
               {categories.map(cat => (
                 <TabsTrigger 
                   key={cat.id} 
                   value={cat.id}
                   className={cn(
                     "text-sm font-medium px-4 py-2 transition-all",
-                    category === cat.id ? "bg-white shadow-sm" : "hover:bg-white/40"
+                    category === cat.id 
+                      ? "bg-white shadow-sm dark:bg-gray-700 dark:text-white" 
+                      : "hover:bg-white/40 dark:hover:bg-gray-700/40"
                   )}
                 >
                   {cat.label}
