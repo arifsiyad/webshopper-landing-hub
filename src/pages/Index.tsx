@@ -1,6 +1,5 @@
 
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Templates from "@/components/Templates";
 import Features from "@/components/Features";
@@ -43,7 +42,6 @@ const Index = () => {
   
   return (
     <div className="min-h-screen">
-      <Navbar />
       <Hero />
       <Templates />
       <Features />

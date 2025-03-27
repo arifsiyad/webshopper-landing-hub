@@ -11,11 +11,11 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    // Set dark mode as default
-    document.documentElement.classList.add("dark");
+    // Set light mode as default
+    document.documentElement.classList.remove("dark");
   }, []);
 
   const toggleTheme = () => {
