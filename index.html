@@ -16,12 +16,1078 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@litpages" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="logo">
+            <span>LitPages</span>
+          </a>
+          
+          <div class="desktop-menu">
+            <a href="#templates" class="nav-link">Templates</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+          </div>
+
+          <div class="right-menu">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+            </button>
+            
+            <a href="#login" class="login-link">Login</a>
+            <a href="#register" class="button-primary">Get Started</a>
+          </div>
+          
+          <button class="mobile-menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+          <div class="hero-content animate-fade-in">
+            <div class="hero-badge">
+              <span>Websites for Modern Professionals</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Create stunning websites in minutes
+            </h1>
+            
+            <p class="hero-description">
+              Get professionally designed websites starting at just ₹1,500. Customize and share your online presence instantly.
+            </p>
+            
+            <div class="hero-buttons">
+              <a href="#register" class="button-primary">
+                Create Your Website
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#how-it-works" class="button-secondary">
+                How It Works
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Templates Section -->
+      <section id="templates" class="templates">
+        <div class="container">
+          <div class="section-header animate-slide-up">
+            <h2 class="section-title">
+              10+ stunning website templates
+            </h2>
+            <p class="section-description">
+              Choose from our collection of professionally designed website templates.
+            </p>
+          </div>
+          
+          <div class="tabs">
+            <div class="tabs-list">
+              <button class="tab-trigger active" data-category="all">All Templates</button>
+              <button class="tab-trigger" data-category="business">Business</button>
+              <button class="tab-trigger" data-category="professional">Professional</button>
+              <button class="tab-trigger" data-category="creative">Creative</button>
+              <button class="tab-trigger" data-category="personal">Personal</button>
+            </div>
+            
+            <div class="templates-grid">
+              <div class="template-card" data-category="business">
+                <div class="template-image">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Modern Business" loading="lazy">
+                  <div class="template-badge">Popular</div>
+                </div>
+                <div class="template-content">
+                  <h3>Modern Business</h3>
+                  <div class="template-meta">
+                    <span>Website Template</span>
+                    <a href="#register">Try Now</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="template-card" data-category="creative">
+                <div class="template-image">
+                  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Creative Portfolio" loading="lazy">
+                </div>
+                <div class="template-content">
+                  <h3>Creative Portfolio</h3>
+                  <div class="template-meta">
+                    <span>Website Template</span>
+                    <a href="#register">Try Now</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="template-card" data-category="business">
+                <div class="template-image">
+                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Entrepreneur" loading="lazy">
+                  <div class="template-badge">Popular</div>
+                </div>
+                <div class="template-content">
+                  <h3>Entrepreneur</h3>
+                  <div class="template-meta">
+                    <span>Website Template</span>
+                    <a href="#register">Try Now</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="template-card" data-category="personal">
+                <div class="template-image">
+                  <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Personal Brand" loading="lazy">
+                </div>
+                <div class="template-content">
+                  <h3>Personal Brand</h3>
+                  <div class="template-meta">
+                    <span>Website Template</span>
+                    <a href="#register">Try Now</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="template-card" data-category="professional">
+                <div class="template-image">
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Corporate" loading="lazy">
+                  <div class="template-badge">Popular</div>
+                </div>
+                <div class="template-content">
+                  <h3>Corporate</h3>
+                  <div class="template-meta">
+                    <span>Website Template</span>
+                    <a href="#register">Try Now</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="template-card" data-category="professional">
+                <div class="template-image">
+                  <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b" alt="Freelancer" loading="lazy">
+                </div>
+                <div class="template-content">
+                  <h3>Freelancer</h3>
+                  <div class="template-meta">
+                    <span>Website Template</span>
+                    <a href="#register">Try Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features">
+        <div class="container">
+          <div class="section-header animate-slide-up">
+            <h2 class="section-title">
+              Powerful website features
+            </h2>
+            <p class="section-description">
+              Our websites come packed with features to help you stand out.
+            </p>
+          </div>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 15v5M9 15v5M3 7V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2M15 5H9M3 7h18M3 7v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"></path>
+                </svg>
+              </div>
+              <h3>Websites</h3>
+              <p>Create beautiful websites that can be shared instantly via links and social media.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19V5"></path>
+                  <path d="M5 12h14"></path>
+                </svg>
+              </div>
+              <h3>Customizable Templates</h3>
+              <p>Choose from 10+ beautiful templates and customize colors, fonts, and content.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                  <path d="M12 18h.01"></path>
+                </svg>
+              </div>
+              <h3>Mobile Responsive</h3>
+              <p>All websites work perfectly on all devices, from desktops to smartphones.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <h3>Social Media Integration</h3>
+              <p>Connect all your social profiles in one place for easy access.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3>Business Hours</h3>
+              <p>Display your business hours so customers know when you're available.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18"></path>
+                  <path d="m19 9-5 5-4-4-3 3"></path>
+                </svg>
+              </div>
+              <h3>Inquiry Management</h3>
+              <p>Receive and manage inquiries directly through your website.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>User Management</h3>
+              <p>Admins can manage users, view statistics, and control access.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                  <line x1="2" x2="22" y1="10" y2="10"></line>
+                </svg>
+              </div>
+              <h3>Analytics & Insights</h3>
+              <p>Track views, clicks, and engagement on your websites.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <h3>Instant Updates</h3>
+              <p>Update your information anytime and see changes reflected instantly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content animate-slide-up">
+              <h2 class="section-title">
+                About LitPages
+              </h2>
+              <p>
+                LitPages is a digital business card platform that empowers professionals and businesses to create stunning
+                digital business cards that can be shared instantly via QR code, link, or NFC technology.
+              </p>
+              <p>
+                Founded in 2023, our mission is to eliminate paper waste from traditional business cards
+                while providing a more interactive, engaging, and effective networking tool for the modern professional.
+              </p>
+              
+              <div class="about-features">
+                <div class="about-feature">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <div>
+                    <h3>Easy to Use</h3>
+                    <p>Create your digital card in minutes</p>
+                  </div>
+                </div>
+                <div class="about-feature">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <div>
+                    <h3>Eco-Friendly</h3>
+                    <p>No more paper waste from traditional cards</p>
+                  </div>
+                </div>
+                <div class="about-feature">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <div>
+                    <h3>Always Updated</h3>
+                    <p>Change details instantly when needed</p>
+                  </div>
+                </div>
+                <div class="about-feature">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <div>
+                    <h3>Analytics</h3>
+                    <p>Track engagement with your digital card</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="about-image">
+              <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Digital Business Card">
+              </div>
+              <div class="image-bg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header animate-slide-up">
+            <h2 class="section-title">
+              Our Services
+            </h2>
+            <p class="section-description">
+              LitPages offers a range of services to help you make the most of your digital business cards.
+            </p>
+          </div>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                  <path d="M12 18h.01"></path>
+                </svg>
+              </div>
+              <h3>Digital Business Cards</h3>
+              <p>Create beautiful digital business cards that can be shared via QR code, link, or NFC technology.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Team Management</h3>
+              <p>Manage multiple team members and their digital business cards from a single dashboard.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18"></path>
+                  <path d="m19 9-5 5-4-4-3 3"></path>
+                </svg>
+              </div>
+              <h3>Analytics & Insights</h3>
+              <p>Track views, clicks, and engagement with your digital business cards to optimize performance.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <h3>Inquiry Management</h3>
+              <p>Receive and respond to inquiries directly through your digital business card.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3>Customization Services</h3>
+              <p>Need extra help? Our team can customize your digital business card to match your brand exactly.</p>
+            </div>
+            
+            <div class="service-card">
+              <div class="service-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                </svg>
+              </div>
+              <h3>Technical Support</h3>
+              <p>Get technical support and assistance whenever you need it from our dedicated support team.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="how-it-works">
+        <div class="container">
+          <div class="section-header animate-slide-up">
+            <h2 class="section-title">
+              Simple three-step process
+            </h2>
+            <p class="section-description">
+              Get your website up and running in minutes, not days.
+            </p>
+          </div>
+          
+          <div class="steps">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h3>Create your account</h3>
+              <p>Register and verify your email to gain access to your admin dashboard.</p>
+            </div>
+            
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h3>Choose a template</h3>
+              <p>Select from our 10 professional website templates that match your style.</p>
+            </div>
+            
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h3>Customize & share</h3>
+              <p>Add your information, customize colors, and share your website instantly.</p>
+            </div>
+          </div>
+          
+          <div class="cta-center">
+            <a href="#pricing" class="button-primary">
+              Get Started Today
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <div class="section-header animate-slide-up">
+            <h2 class="section-title">
+              Choose your plan
+            </h2>
+            <p class="section-description">
+              Select the perfect plan for your needs with transparent pricing and no hidden fees.
+            </p>
+          </div>
+          
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Basic</h3>
+                <div class="pricing-price">
+                  <span class="price">₹1,500</span>
+                  <span class="period">one-time</span>
+                </div>
+                <p>Perfect for individuals</p>
+              </div>
+              
+              <div class="pricing-features">
+                <ul>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>1 Digital Business Card</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>5 Standard Templates</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Basic Customization</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Social Media Links</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Contact Information</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>1 Month Support</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Analytics Dashboard</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Email Inquiries</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="pricing-action">
+                <a href="#register" class="pricing-button">Get Started</a>
+              </div>
+            </div>
+            
+            <div class="pricing-card popular">
+              <div class="popular-tag">Most Popular</div>
+              <div class="pricing-header">
+                <h3>Professional</h3>
+                <div class="pricing-price">
+                  <span class="price">₹3,500</span>
+                  <span class="period">one-time</span>
+                </div>
+                <p>Ideal for professionals</p>
+              </div>
+              
+              <div class="pricing-features">
+                <ul>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>3 Digital Business Cards</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>All 10 Templates</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Full Customization</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Social Media Integration</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Business Hours</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Custom Inquiry Form</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>3 Months Support</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Advanced Analytics</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Priority Support</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="pricing-action">
+                <a href="#register" class="pricing-button popular-button">Get Started</a>
+              </div>
+            </div>
+            
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Business</h3>
+                <div class="pricing-price">
+                  <span class="price">₹6,000</span>
+                  <span class="period">one-time</span>
+                </div>
+                <p>Best for small businesses</p>
+              </div>
+              
+              <div class="pricing-features">
+                <ul>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>10 Digital Business Cards</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>All Templates</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Premium Customization</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Team Management</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>API Access</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Dedicated Account Manager</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>12 Months Support</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Custom Domain</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Advanced Analytics</span>
+                  </li>
+                  <li>
+                    <span class="check-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </span>
+                    <span>Priority Support</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="pricing-action">
+                <a href="#register" class="pricing-button">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="faq">
+        <div class="container">
+          <div class="section-header animate-slide-up">
+            <h2 class="section-title">
+              Frequently asked questions
+            </h2>
+            <p class="section-description">
+              Find answers to common questions about our pre-built websites.
+            </p>
+          </div>
+          
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                How long does it take to set up my website?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>Once you've selected a template and provided your content, we can have your website up and running within 24-48 hours.</p>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                Can I use my own domain name?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>Yes, you can use your existing domain or we can help you register a new one. We'll handle all the technical setup for you.</p>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                Are there any monthly fees?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>The ₹1,500 is a one-time payment for the website setup. You'll only need to pay for your domain registration and hosting separately, which typically costs around ₹1,000-2,000 per year.</p>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                Can I add more pages later?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>Yes, additional pages can be added at a cost of ₹300 per page. We'll ensure they match the design of your existing website.</p>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                Do you provide website hosting?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>We don't provide hosting directly, but we can recommend reliable hosting providers and help you set everything up.</p>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-trigger">
+                What if I need changes after the website is launched?
+                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>We offer a week of free support for minor text and image changes. After that, we offer maintenance packages or hourly rates for updates.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-cta">
+            <p>Still have questions? We're here to help.</p>
+            <a href="#contact" class="button-secondary">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info animate-slide-up">
+              <h2 class="section-title">
+                Get in touch
+              </h2>
+              <p>
+                Have questions about our digital business cards or need assistance with your account? Fill out the form and we'll get back to you within 24 hours.
+              </p>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Email</h3>
+                    <p>contact@litpages.com</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Office</h3>
+                    <p>123 Business Park, Mumbai, India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-container animate-slide-up">
+              <div class="contact-form">
+                <h3>Send us a message</h3>
+                
+                <form id="contactForm">
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                      <option value="">Select a subject</option>
+                      <option value="general">General Inquiry</option>
+                      <option value="support">Technical Support</option>
+                      <option value="billing">Billing Question</option>
+                      <option value="partnership">Partnership Opportunity</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+                  </div>
+                  
+                  <button type="submit" class="button-primary">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-logo">
+              <span>LitPages</span>
+              <p>
+                Create and share digital business cards that make a lasting impression.
+              </p>
+            </div>
+            
+            <div class="footer-links">
+              <div class="footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                  <li><a href="#templates">Templates</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#pricing">Pricing</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-col">
+                <h3>Features</h3>
+                <ul>
+                  <li><a href="#features">Digital Business Cards</a></li>
+                  <li><a href="#features">Custom Templates</a></li>
+                  <li><a href="#features">Analytics</a></li>
+                  <li><a href="#features">QR Codes</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-col">
+                <h3>Legal</h3>
+                <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Refund Policy</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                  <li>contact@litpages.com</li>
+                  <li>+91 98765 43210</li>
+                  <li><a href="#contact">Contact Form</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> LitPages. All rights reserved.</p>
+            
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
