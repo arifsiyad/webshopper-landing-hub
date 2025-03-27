@@ -1,10 +1,11 @@
+
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 
 const categories = [
@@ -458,8 +459,8 @@ const TemplatesPage = () => {
     : templates.filter(template => template.category === category);
 
   return (
-    <div className="container mx-auto py-12 px-4">
-      <div className="text-center mb-12">
+    <div className="container mx-auto py-24 px-4">
+      <div className="text-center mb-16 mt-12"> {/* Increased spacing here */}
         <h1 className="text-4xl font-display font-bold text-gradient-primary mb-4">
           All Templates
         </h1>

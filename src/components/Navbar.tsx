@@ -6,10 +6,12 @@ import { Moon, Sun } from 'lucide-react';
 import { Toggle } from '@/components/ui/toggle';
 import { useTheme } from '@/context/ThemeContext';
 import TemplateLink from './TemplateLink';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,10 +55,14 @@ const Navbar = () => {
           <a href="#faq" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
             FAQ
           </a>
-          <TemplateLink />
+          <TemplateLink className="hidden md:flex" />
         </div>
 
         <div className="flex items-center gap-4">
+          {isMobile && (
+            <TemplateLink className="md:hidden" />
+          )}
+          
           <Toggle 
             pressed={theme === 'dark'} 
             onPressedChange={toggleTheme}
