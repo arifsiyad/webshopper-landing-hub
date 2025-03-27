@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Moon, Sun } from 'lucide-react';
 import { Toggle } from '@/components/ui/toggle';
 import { useTheme } from '@/context/ThemeContext';
+import TemplateLink from './TemplateLink';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -52,6 +53,7 @@ const Navbar = () => {
           <a href="#faq" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
             FAQ
           </a>
+          <TemplateLink />
         </div>
 
         <div className="flex items-center gap-4">
