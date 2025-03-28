@@ -108,15 +108,15 @@ const Templates = () => {
         <Tabs defaultValue="all" className="w-full" onValueChange={setCategory}>
           <div className="overflow-x-auto mb-6 md:mb-10">
             <TabsList className={cn(
-              "bg-secondary/50 dark:bg-gray-800 min-w-max",
-              isMobile ? "flex w-full overflow-x-auto p-1 space-x-1" : "p-1"
+              "bg-secondary/50 dark:bg-gray-800 min-w-max w-full", // Full width on mobile
+              isMobile ? "flex overflow-x-auto p-1 space-x-1" : "p-1"
             )}>
               {categories.map(cat => (
                 <TabsTrigger 
                   key={cat.id} 
                   value={cat.id}
                   className={cn(
-                    "text-sm font-medium px-4 py-2 transition-all whitespace-nowrap",
+                    "text-xs sm:text-sm font-medium px-2 py-2 transition-all whitespace-nowrap", // Reduced padding
                     category === cat.id 
                       ? "bg-white shadow-sm dark:bg-gray-700 dark:text-white" 
                       : "hover:bg-white/40 dark:hover:bg-gray-700/40"
