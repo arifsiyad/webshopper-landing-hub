@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const categories = [
   { id: 'all', label: 'All Templates' },
@@ -86,6 +87,7 @@ const TemplateCard = ({ template }: { template: typeof templates[0] }) => {
 
 const Templates = () => {
   const [category, setCategory] = useState('all');
+  const isMobile = useIsMobile();
   
   const filteredTemplates = category === 'all' 
     ? templates 
@@ -94,7 +96,7 @@ const Templates = () => {
   return (
     <section id="templates" className="py-24 px-4 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 animate-slide-up">
+        <div className="text-center mb-12 mt-16 animate-slide-up"> {/* Added more top margin */}
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary dark:text-white">
             10+ stunning website templates
           </h2>
@@ -104,14 +106,17 @@ const Templates = () => {
         </div>
         
         <Tabs defaultValue="all" className="w-full" onValueChange={setCategory}>
-          <div className="flex justify-center mb-10">
-            <TabsList className="bg-secondary/50 dark:bg-gray-800 p-1">
+          <div className="flex justify-center mb-10 overflow-x-auto pb-2"> {/* Added overflow handling */}
+            <TabsList className={cn(
+              "bg-secondary/50 dark:bg-gray-800",
+              isMobile ? "flex w-full overflow-x-auto p-1 space-x-1" : "p-1"
+            )}>
               {categories.map(cat => (
                 <TabsTrigger 
                   key={cat.id} 
                   value={cat.id}
                   className={cn(
-                    "text-sm font-medium px-4 py-2 transition-all",
+                    "text-sm font-medium px-4 py-2 transition-all whitespace-nowrap",
                     category === cat.id 
                       ? "bg-white shadow-sm dark:bg-gray-700 dark:text-white" 
                       : "hover:bg-white/40 dark:hover:bg-gray-700/40"
@@ -124,7 +129,7 @@ const Templates = () => {
           </div>
           
           <TabsContent value={category} className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filteredTemplates.map(template => (
                 <TemplateCard key={template.id} template={template} />
               ))}
