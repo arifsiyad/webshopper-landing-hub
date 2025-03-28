@@ -94,21 +94,21 @@ const Templates = () => {
     : templates.filter(template => template.category === category);
 
   return (
-    <section id="templates" className="py-24 px-4 dark:bg-gray-900">
+    <section id="templates" className="py-12 md:py-24 px-4 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 mt-16 animate-slide-up"> {/* Added more top margin */}
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-gradient-primary dark:text-white">
+        <div className="text-center mb-8 md:mb-12 mt-20 md:mt-16 animate-slide-up">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-gradient-primary dark:text-white">
             10+ stunning website templates
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto dark:text-gray-400">
+          <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto dark:text-gray-400">
             Choose from our collection of professionally designed website templates.
           </p>
         </div>
         
         <Tabs defaultValue="all" className="w-full" onValueChange={setCategory}>
-          <div className="flex justify-center mb-10 overflow-x-auto pb-2"> {/* Added overflow handling */}
+          <div className="overflow-x-auto mb-6 md:mb-10">
             <TabsList className={cn(
-              "bg-secondary/50 dark:bg-gray-800",
+              "bg-secondary/50 dark:bg-gray-800 min-w-max",
               isMobile ? "flex w-full overflow-x-auto p-1 space-x-1" : "p-1"
             )}>
               {categories.map(cat => (
@@ -129,7 +129,7 @@ const Templates = () => {
           </div>
           
           <TabsContent value={category} className="mt-0">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
               {filteredTemplates.map(template => (
                 <TemplateCard key={template.id} template={template} />
               ))}

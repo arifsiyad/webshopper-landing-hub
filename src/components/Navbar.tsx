@@ -62,7 +62,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          {/* Mobile template link */}
+          {/* Mobile template link - positioned before theme toggle */}
           {isMobile && (
             <TemplateLink className="md:hidden" />
           )}
@@ -111,9 +111,6 @@ const Navbar = () => {
                     <Link to="/login" className="text-base font-medium">
                       Login
                     </Link>
-                    <Link to="/register" className="button-primary w-full flex items-center justify-center">
-                      Get Started
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -129,7 +126,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/register" 
-            className="button-primary text-sm font-medium dark:bg-white dark:text-black dark:hover:bg-gray-200"
+            className="button-primary text-sm font-medium dark:bg-white dark:text-black dark:hover:bg-gray-200 hidden md:inline-flex"
           >
             Get Started
           </Link>
