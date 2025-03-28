@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, Moon, Sun, X } from 'lucide-react';
@@ -54,7 +54,7 @@ const Navbar = () => {
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link, index) => (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
               {isHomePage ? (
                 <a href={link.href} className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
                   {link.text}
@@ -67,7 +67,7 @@ const Navbar = () => {
                   {link.text}
                 </Link>
               )}
-            </React.Fragment>
+            </Fragment>
           ))}
           <TemplateLink className="hidden md:flex" />
         </div>
@@ -100,7 +100,7 @@ const Navbar = () => {
             <SheetContent side="right" className="md:hidden w-[80%]">
               <div className="flex flex-col space-y-6 mt-10">
                 {navLinks.map((link, index) => (
-                  <React.Fragment key={index}>
+                  <Fragment key={index}>
                     {isHomePage ? (
                       <a 
                         href={link.href} 
@@ -116,7 +116,7 @@ const Navbar = () => {
                         {link.text}
                       </Link>
                     )}
-                  </React.Fragment>
+                  </Fragment>
                 ))}
                 <Link 
                   to="/contact"
