@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import Footer from "@/components/Footer";
 
 const categories = [
   { id: 'all', label: 'All Templates' },
@@ -460,7 +460,7 @@ const TemplatesPage = () => {
 
   return (
     <div className="container mx-auto py-24 px-4">
-      <div className="text-center mb-16 mt-12"> {/* Increased spacing here */}
+      <div className="text-center mb-16 mt-12">
         <h1 className="text-4xl font-display font-bold text-gradient-primary mb-4">
           All Templates
         </h1>
@@ -514,6 +514,8 @@ const TemplatesPage = () => {
       ) : (
         <ComparisonTable />
       )}
+      
+      <Footer />
     </div>
   );
 };

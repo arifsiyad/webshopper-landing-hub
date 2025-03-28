@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { Toggle } from '@/components/ui/toggle';
 import { useTheme } from '@/context/ThemeContext';
@@ -13,7 +13,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const isMobile = useIsMobile();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +23,19 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Check if we're on the homepage
+  const isHomePage = location.pathname === '/';
+
+  // Navigation links
+  const navLinks = [
+    { text: "Templates", href: isHomePage ? "#templates" : "/templates" },
+    { text: "Features", href: isHomePage ? "#features" : "/features" },
+    { text: "About Us", href: isHomePage ? "#about" : "/about" },
+    { text: "Services", href: isHomePage ? "#services" : "/services" },
+    { text: "Pricing", href: isHomePage ? "#pricing" : "/pricing" },
+    { text: "FAQ", href: isHomePage ? "#faq" : "/faq" }
+  ];
 
   return (
     <nav 
@@ -34,30 +47,28 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <span className="text-xl font-display font-bold dark:text-white">LitPages</span>
-        </a>
+        </Link>
         
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#templates" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
-            Templates
-          </a>
-          <a href="#features" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
-            Features
-          </a>
-          <a href="#about" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
-            About Us
-          </a>
-          <a href="#services" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
-            Services
-          </a>
-          <a href="#pricing" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
-            Pricing
-          </a>
-          <a href="#faq" className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
-            FAQ
-          </a>
+          {navLinks.map((link, index) => (
+            <React.Fragment key={index}>
+              {isHomePage ? (
+                <a href={link.href} className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
+                  {link.text}
+                </a>
+              ) : (
+                <Link 
+                  to={link.href} 
+                  className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70"
+                >
+                  {link.text}
+                </Link>
+              )}
+            </React.Fragment>
+          ))}
           <TemplateLink className="hidden md:flex" />
         </div>
 
@@ -88,24 +99,31 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="right" className="md:hidden w-[80%]">
               <div className="flex flex-col space-y-6 mt-10">
-                <a href="#templates" className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom">
-                  Templates
-                </a>
-                <a href="#features" className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom">
-                  Features
-                </a>
-                <a href="#about" className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom">
-                  About Us
-                </a>
-                <a href="#services" className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom">
-                  Services
-                </a>
-                <a href="#pricing" className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom">
-                  Pricing
-                </a>
-                <a href="#faq" className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom">
-                  FAQ
-                </a>
+                {navLinks.map((link, index) => (
+                  <React.Fragment key={index}>
+                    {isHomePage ? (
+                      <a 
+                        href={link.href} 
+                        className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom"
+                      >
+                        {link.text}
+                      </a>
+                    ) : (
+                      <Link 
+                        to={link.href}
+                        className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom"
+                      >
+                        {link.text}
+                      </Link>
+                    )}
+                  </React.Fragment>
+                ))}
+                <Link 
+                  to="/contact"
+                  className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom"
+                >
+                  Contact
+                </Link>
                 <div className="px-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <div className="flex flex-col space-y-4">
                     <Link to="/login" className="text-base font-medium">
