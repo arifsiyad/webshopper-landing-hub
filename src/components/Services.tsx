@@ -1,5 +1,7 @@
 
 import { Smartphone, Users, BarChart, Mail, Settings, ShieldCheck } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -54,13 +56,19 @@ const Services = () => {
               className="premium-card p-8 flex flex-col items-center text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="h-16 w-16 rounded-full bg-black/5 flex items-center justify-center mb-6">
+              <div className="h-16 w-16 rounded-full bg-black/5 flex items-center justify-center mb-6 dark:bg-white/10">
                 <service.icon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-medium mb-3">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Button asChild size="lg">
+            <Link to="/services">View All Services</Link>
+          </Button>
         </div>
       </div>
     </section>
