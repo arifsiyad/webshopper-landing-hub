@@ -89,29 +89,6 @@ const categories = [
   { id: 'addon', label: 'Add-on Services' }
 ];
 
-const processSteps = [
-  {
-    title: "Initial Consultation",
-    description: "We begin with a detailed consultation to understand your business, brand, and specific requirements."
-  },
-  {
-    title: "Solution Design",
-    description: "Our team designs a tailored solution based on your requirements, selecting the right services and features for your needs."
-  },
-  {
-    title: "Implementation",
-    description: "We implement your digital business card solution, including setting up all selected services and features."
-  },
-  {
-    title: "Training & Onboarding",
-    description: "We provide comprehensive training to ensure you can make the most of your digital business cards."
-  },
-  {
-    title: "Ongoing Support",
-    description: "Our team provides ongoing support and assistance to ensure your digital business cards continue to perform optimally."
-  }
-];
-
 const testimonials = [
   {
     quote: "LitPages transformed how we share contact information. Our clients love the professional look and convenience of our digital business cards.",
@@ -217,29 +194,6 @@ const ServicesPage = () => {
         </TabsContent>
       </Tabs>
       
-      {/* Our Process Section */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Service Process</h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {processSteps.map((step, index) => (
-            <div key={index} className="relative premium-card p-6 text-center flex flex-col items-center">
-              <div className="absolute -top-5 h-10 w-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
-                {index + 1}
-              </div>
-              <h3 className="text-xl font-medium mt-6 mb-3">{step.title}</h3>
-              <p className="text-muted-foreground text-sm">{step.description}</p>
-              {index < processSteps.length - 1 && (
-                <div className="hidden md:block absolute -right-3 top-1/2 transform -translate-y-1/2 rotate-0 md:rotate-[-20deg]">
-                  <svg width="40" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-      
       {/* Testimonials */}
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
@@ -280,7 +234,7 @@ const ServicesPage = () => {
         </div>
       </div>
       
-      <div className="max-w-3xl mx-auto bg-secondary/30 rounded-lg p-8 text-center mb-20">
+      <div className="max-w-3xl mx-auto bg-secondary/30 rounded-lg p-8 text-center mb-28">
         <h2 className="text-2xl font-bold mb-4">Need a Custom Solution?</h2>
         <p className="text-muted-foreground mb-6">
           We understand that every business is unique. Contact us to discuss your specific requirements and how we can help you achieve your goals.

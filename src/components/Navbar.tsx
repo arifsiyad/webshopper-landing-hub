@@ -2,7 +2,7 @@
 import { useState, useEffect, Fragment } from 'react';
 import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { Menu, Moon, Sun } from 'lucide-react';
 import { Toggle } from '@/components/ui/toggle';
 import { useTheme } from '@/context/ThemeContext';
 import TemplateLink from './TemplateLink';
@@ -29,12 +29,12 @@ const Navbar = () => {
 
   // Navigation links
   const navLinks = [
-    { text: "Templates", href: isHomePage ? "#templates" : "/templates" },
-    { text: "Features", href: isHomePage ? "#features" : "/features" },
-    { text: "About Us", href: isHomePage ? "#about" : "/about" },
-    { text: "Services", href: isHomePage ? "#services" : "/services" },
-    { text: "Pricing", href: isHomePage ? "#pricing" : "/pricing" },
-    { text: "FAQ", href: isHomePage ? "#faq" : "/faq" }
+    { text: "Templates", href: "/templates" },
+    { text: "Features", href: "/features" },
+    { text: "About Us", href: "/about" },
+    { text: "Services", href: "/services" },
+    { text: "Pricing", href: "/pricing" },
+    { text: "FAQ", href: "/faq" }
   ];
 
   return (
@@ -55,18 +55,12 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link, index) => (
             <Fragment key={index}>
-              {isHomePage ? (
-                <a href={link.href} className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70">
-                  {link.text}
-                </a>
-              ) : (
-                <Link 
-                  to={link.href} 
-                  className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70"
-                >
-                  {link.text}
-                </Link>
-              )}
+              <Link 
+                to={link.href} 
+                className="text-sm font-medium hover:text-black/70 transition-custom dark:text-gray-200 dark:hover:text-white/70"
+              >
+                {link.text}
+              </Link>
             </Fragment>
           ))}
           <TemplateLink className="hidden md:flex" />
@@ -101,21 +95,12 @@ const Navbar = () => {
               <div className="flex flex-col space-y-6 mt-10">
                 {navLinks.map((link, index) => (
                   <Fragment key={index}>
-                    {isHomePage ? (
-                      <a 
-                        href={link.href} 
-                        className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom"
-                      >
-                        {link.text}
-                      </a>
-                    ) : (
-                      <Link 
-                        to={link.href}
-                        className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom"
-                      >
-                        {link.text}
-                      </Link>
-                    )}
+                    <Link 
+                      to={link.href}
+                      className="text-base font-medium px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-custom"
+                    >
+                      {link.text}
+                    </Link>
                   </Fragment>
                 ))}
                 <Link 

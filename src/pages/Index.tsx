@@ -10,9 +10,12 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  // Smooth scroll implementation
+  const navigate = useNavigate();
+
+  // Smooth scroll implementation for in-page navigation
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
