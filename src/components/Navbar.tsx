@@ -27,9 +27,8 @@ const Navbar = () => {
   // Check if we're on the homepage
   const isHomePage = location.pathname === '/';
 
-  // Navigation links
+  // Navigation links - Removed duplicate Templates link
   const navLinks = [
-    { text: "Templates", href: "/templates" },
     { text: "Features", href: "/features" },
     { text: "About Us", href: "/about" },
     { text: "Services", href: "/services" },
